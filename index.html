@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Enrico | Portifólio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#Home" class="menu-link">Home</a>
+            </li>
+            <li>
+                <a href="#About me" class="menu-link">About me</a>
+            </li>
+            <li>
+                <a href="#Projects" class="menu-link">Projects</a>
+            </li>
+            <li>
+                <a href="#Contact" class="menu-link">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="Home" class="cabecalho">
+        <div class="foto-perfil">
+            <img src="./img/enrico.png" alt="Foto do Enrico" class="foto-perfil-img" />
+        </div>
+
+        <h1>Enrico Lizier Godinho</h1>
+        <p class="cabecalho-sub-titulo">Back & front end Developer</p>
+    </main>
+
+    <section id="About me" class="sobre">
+        <h2 class="sobre-titulo">About me</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Enrico, 19 years old. I work in Logistics at Alpha Candies and I'm a
+                Systems Analysis and Development student at Facens. As a Back-end and
+                Front-end programmer, my main languages are HTML, CSS, JavaScript, and
+                Java. I also work as a freelancer in the tech field. I'm a running
+                enthusiast, a hobby that strengthens my discipline and resilience.
+            </p>
+        </div>
+    </section>
+
+    <section id="Projects" class="projetos">
+        <h2 class="projetos-titulo">My Projects</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <img src="./img/foto1.png" alt="Projeto 1" class="projetos-imagem" />
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Sweet Shop</h3>
+                    <p class="paragrafo-projetos">
+                        Dolce Vita Di Sandi sweet shop, a modern and responsive website.
+                    </p>
+                </div>
+            </div>
+            <div class="projetos-card">
+                <img src="./img/foto2.png" alt="Projeto 1" class="projetos-imagem" />
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Personal Portfolio</h3>
+                    <p class="paragrafo-projetos">
+                        Enrico's personal portfolio, a simple second project with a basic HTML and CSS structure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact" class="contatos">
+        <h2 class="contatos-titulo">Contact</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Name" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Enter your message" rows="6" id="mensagem""></textarea>
+            </div>
+
+            <button type=" submit" class="botao-form">Send via WhatsApp</button>
+        </form>
+    </section>
+</body>
+
+<script>    
+
+    function enviarWhats(event) {
+        event.preventDefault()
+
+        const nome = document.getElementById("nome").value;
+        const mensagem = document.getElementById("mensagem").value;
+        const telefone = "5515996280398";
+
+        const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+        const msgFormatada = encodeURIComponent(texto)
+
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+        console.log(url)
+
+
+        window.open(url, '_blank')
+    }
+
+</script>
+
+</html>
