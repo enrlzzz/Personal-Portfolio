@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio! This website is my second project and a showcase of my skills in front-end development. It's built with a simple, modern, and responsive design, providing a great user experience on any device.
 
-You can visit the live project here: [**DevEnrico.com**](https://DevEnrico.com)
+You can visit the live project here: [**enricodev.com.br**](https://enricodev.com.br)
 
 ## 🚀 **Features**
 
