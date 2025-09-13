@@ -146,6 +146,7 @@ h1 {
     overflow: hidden;
     transition: all 0.5s ease;
     cursor: pointer;
+    will-change: transform, box-shadow;
 }
 
 .projetos-titulo {
@@ -229,6 +230,7 @@ h1 {
     box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
 }
 
+
 .particulas {
     position: fixed;
     top: 0;
@@ -242,6 +244,69 @@ h1 {
     radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
     var(--maisEscuro)
 ;
+}
+.link-projeto {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cv-buttons {
+    display: flex;
+    gap: 1rem; /* Espaçamento entre os botões */
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent; /* Borda base para evitar "pulo" no hover */
+}
+
+/* Botão preenchido (Contact Info) */
+.btn-color-1 {
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    color: var(--claro);
+}
+
+.btn-color-1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+/* Botão vazado (Download CV) */
+.btn-color-2 {
+    background: transparent;
+    border-color: var(--primaria);
+    color: var(--claro);
+}
+
+.btn-color-2:hover {
+    background: var(--primaria);
+    color: var(--claro);
+}
+
+.social-icons {
+    margin-top: 2rem; /* Espaço entre os botões e os ícones */
+    display: flex;
+    gap: 1.5rem; /* Espaçamento entre os ícones */
+    justify-content: center; /* Centraliza os ícones */
+    align-items: center;
+}
+
+.social-icons a {
+    color: var(--claro); /* Cor padrão dos ícones */
+    font-size: 2rem; /* Tamanho dos ícones */
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.social-icons a:hover {
+    color: var(--primaria); /* Cor ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de flutuação ao passar o mouse */
 }
 
 @keyframes flutuar {
