@@ -1,0 +1,16 @@
+name: Deploy na Branch Principal
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v3
+
+      - name: Apenas um Exemplo
+        run: echo "O workflow foi iniciado com sucesso!"
